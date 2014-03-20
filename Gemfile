@@ -35,6 +35,16 @@ group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', '0.3.20', require: false
 end
+
+# For Heroku Deploy
+group :production do
+  # For PostgreSQL
+  gem 'pg', '0.15.1'
+  # For Heroku to serve static assets such as images and stylesheets
+  gem 'rails_12factor', '0.0.2'
+end
+
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
